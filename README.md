@@ -1,12 +1,12 @@
 # Dictionary
 
-#### Creates an application for dictionary using Word and Definition, February 19, 2016.
+#### Creates an application for dictionary by entering a word and definition to it: February 19, 2016.
 
 #### By Polina Nenchev
 
 ## Description
 
-This was created as an Epicodus exercise in Behavior Driven Development, web app development with Spark and Velocity, and solo programming.
+This was created as an Epicodus code review in Behavior Driven Development, web app development with Spark and Velocity, using objects within objects and categories, and solo programming.
 
 ## Setup/Installation Requirements
 
@@ -15,12 +15,12 @@ This was created as an Epicodus exercise in Behavior Driven Development, web app
 * In the top level of the cloned directory, run the following command in your terminal:
 
 `gradle run`
-
+* Create a giingnore file
 * Open your web browser of choice to localhost:4567
 
 ## Technologies Used
 
-Java, Spark, Junit, Velocity, Bootstrap, Terminal
+Java, Spark, Junit, Velocity, Terminal, GitHub, Selenium, Clear and Serve Rule
 
 ### License
 
