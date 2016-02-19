@@ -1,16 +1,18 @@
-import org.junit.*;
-import static org.junit.Assert.*;
 import java.util.ArrayList;
 
-public class PingPongTest {
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class DefinitionTest {
+  @Test
+  public void newDefinition_instatiateCorrectly_true() {
+    Definition testDefinition = new Definition("place for family");
+    assertEquals(true, testDefinition instanceof Definition);
+  }
 
   @Test
-  public void isPingPong_arrayPing() {
-    PingPong testPingPong = new PingPong();
-    ArrayList<Object> testArray = new ArrayList<Object>();
-    testArray.add(1);
-    testArray.add(2);
-    testArray.add("ping");
-    assertEquals(testArray, testPingPong.isPingPong(3));
+  public void newDefinition_displayADefinition() {
+    Definition testDefinition = new Definition("place for family");
+    assertEquals("place for family", testDefinition.getDefinition());
   }
 }

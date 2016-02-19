@@ -1,9 +1,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "name of folder in the desktop"
+archivesBaseName = "dictionary1"
 version = '1.0'
-mainClassName = "name of main file e.g PingPong"
+mainClassName = "App"
 
 repositories {
  mavenCentral()
