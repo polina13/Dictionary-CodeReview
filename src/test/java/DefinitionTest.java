@@ -4,6 +4,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class DefinitionTest {
+  
   @Test
   public void newDefinition_instatiateCorrectly_true() {
     Definition testDefinition = new Definition("place for family");
