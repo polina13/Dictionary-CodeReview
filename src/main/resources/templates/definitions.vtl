@@ -1,14 +1,11 @@
 definitions.vtl
 
-<h1>Add a $word.getWord</h1>
+<h1>$word.getWord</h1>
 
 <ul>
   #foreach($definition in $definitions)
-    <h3><a href="/definitions/$definition.getId()">$definition.getDefinition()</a></h3>
+    $definition.getDefinition()
   #end
 </ul>
-
-<a href="/words/$word.getId()">Add a definition</a> -->
-
-
-<!-- <h1><a href="/words/$word.getId()"> Add a definition to $word.getWord()</a> </h1>
+    <h3><a href="/words/$word.getId()">Add a definition to $word.getWord()</a></h3>
+  
