@@ -1,9 +1,13 @@
-      <h1>Title</h1>
+main.vtl
 
-      <form action='/detector' method='get'>
-        <div class="form-group">
-          <label for="number">Enter Something</label>
-          <input id="number" name="number" class="form-control" type="text">
-        </div>
-         <button type="submit" class="btn">Enter</button>
-       </form>
+
+<h1>Dictionary</h1>
+
+<p>Add a word</p>
+<form action='/words.vtl' method='post'>
+  <div class="form-group">
+    <label for="word">Write a word</label>
+    <input id="word" name="word" class="form-control" type="text">
+  </div>
+   <button type="submit" class="btn btn-sucess">Add a word</button>
+ </form>
