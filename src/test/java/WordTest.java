@@ -24,11 +24,23 @@ public class WordTest {
     assertTrue(Word.all().contains(firstWord));
     assertTrue(Word.all().contains(secondWord));
   }
+  @Test
+  public void find_returnsNullWhenNoWordFound_null() {
+    assertTrue(Word.find(999)== null);
+  }
 
   @Test
   public void clear_removesAllWordsFromArrayList() {
     Word testWord = new Word("home");
     Word.clear();
     assertEquals(Word.all().size(), 0);
+  }
+
+  @Test
+  public void addDefinition_addsDefinitionToList() {
+    Word testWord = new Word("home");
+    Definition testInputDef = new Definition("place for family");
+    testWord.addDefinition(testInputDef);
+    assertTrue(testWord.getDefinitions().contains(testInputDef));
   }
 }
