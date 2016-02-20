@@ -3,11 +3,11 @@ index.vtl
 
 <h1>Create a dictionary</h1>
 
-<p>Add a word</p>
-<form action='/words' method='post'>
-  <div class="form-group">
-    <label for="word">Write a word</label>
-    <input id="word" name="word" class="form-control" type="text">
-  </div>
-   <button type="submit" class="btn btn-sucess">Add a word</button>
- </form>
+<a class="btn btn-success" href="/words/new">Add Word</a>
+<a class="btn" href="/">View Words</a>
+
+ #foreach ($word in $words)
+ <div id="word-list" class="well">
+     <a id="wordInput" href="/words/$word.getId()">$word.getWord()</a>
+ </div>
+ #end

@@ -1,9 +1,7 @@
 words.vtl
 
 <h1>Words for the dictionary</h1>
-
-<ul>
-  #foreach($word in $words)
-  <h3><a href="/words/$word.getId()">$word.getWord()</a></h3>
-  #end
-</ul>
+  <form action="/" method="post">
+    <input id="word" type="text" name="word">
+    <button class="btn btn-danger" type="submit">Add Word</button>
+  </form>

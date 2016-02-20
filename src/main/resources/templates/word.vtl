@@ -1,20 +1,11 @@
 word.vtl
 
-<h1>Add a definition to your $word.getWord()</h1>
+<h1>$word.getWord()</h1>
+    <a class="btn" href="/words/$word.getId()/definitions/new">Add Definition</a>
+    <a class="btn" href="/">View Words</a>
+
 <ul>
   #foreach($definition in $word.getDefinitions())
-    $definition.getDefinition()</a></h3>
+    $definition.getDefinition()
   #end
 </ul>
-
-<h2>Add definition for $word.getWord()</h2>
-
-<form action="/definitions/$word.getId()" method="post">
-  <input id="inputWord" name="inputWord" type="hidden" value="$word.getId()">
-
-    <div class="form-group">
-      <label for="definition">Write a definition for your chosen word</label>
-      <input id="definition" name="definition" type="text">
-    </div>
-    <button type="submit" class="btn btn-default">Add definition</button>
-</form>
