@@ -1,13 +1,17 @@
 index.vtl
 
+<div class= "jumbotro">
+  <h1>Create a dictionary</h1>
+</div>
 
-<h1>Create a dictionary</h1>
+<h3>Start adding words to create the best dictionary</h3>
+<br>
 
 <a class="btn btn-success" href="/words/new">Add Word</a>
 <a class="btn" href="/">View Words</a>
 
  #foreach ($word in $words)
- <div id="word-list" class="well">
-     <a id="wordInput" href="/words/$word.getId()">$word.getWord()</a>
- </div>
+   <div id="word-list" class="well">
+       <a id="wordInput" href="/words/$word.getId()">$word.getWord()</a>
+   </div>
  #end
