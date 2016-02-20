@@ -46,16 +46,16 @@ public class App {
       HashMap<String, Object>model= new HashMap<String, Object>();
       Word word = Word.find(Integer.parseInt(request.params(":id")));
       model.put("word", word);
-      model.put("definitions", Definition.all());
+      // model.put("definitions", Definition.all());
       model.put("template", "templates/definition-form.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/definitions-new", (request, reponse) -> {
+    post("/definition-new", (request, reponse) -> {
       HashMap<String, Object> model = new HashMap<String, Object>();
 
       String definition = request.queryParams("definition");
-      Word word = Word.find(Integer.parseInt(request.queryParams("word")));
+      Word word = Word.find(Integer.parseInt(request.queryParams("wordInput")));
 
       if(!(definition.equals(""))) {
         Definition newDefinition = new Definition(definition);
@@ -64,8 +64,8 @@ public class App {
       }
 
       model.put("word", word);
-      model.put("template","templates/words.vtl");
+      model.put("template","templates/word.vtl");
       return new ModelAndView(model, layout);
      }, new VelocityTemplateEngine());
-   }
+    }
    }
