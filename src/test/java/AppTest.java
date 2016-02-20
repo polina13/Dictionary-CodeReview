@@ -47,6 +47,16 @@ public class AppTest extends FluentTest {
     assertThat(pageSource()).contains("home");
     assertThat(pageSource()).contains("dog");
   }
+
+
+  @Test
+  public void DefinitionIsCreatedAndDisplayTest() {
+    goTo("http://localhost:4567/definition/new");
+    fill("#definition").with("place for family");
+    submit(".btn");
+    click("a", withText("Add definition for the word"));
+    assertThat(pageSource()).contains("place for family");
+    }
 // this test doesnt work;gives me asertion error
 //   @Test
 //   public void wordFormIsDisplayed() {
