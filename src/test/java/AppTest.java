@@ -27,9 +27,19 @@ public class AppTest extends FluentTest {
   }
 
   @Test
+  public void WordIsDisplayedTest() {
+    goTo("http://localhost:4567/");
+    click("a", withText("Add Word"));
+    fill("#word").with("home");
+    submit(".btn");
+    assertThat(pageSource()).contains("View Words");
+  }
+
+  @Test
   public void checkIfWordCreatedAndDisplayed() {
     goTo("http://localhost:4567/");
-    fill("#word").with("Add Word");
+    click("a",withText("Add Word"));
+    fill("#word");
     submit(".btn");
     assertThat(pageSource()).contains("home");
   }
